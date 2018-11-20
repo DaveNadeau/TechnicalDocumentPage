@@ -42,19 +42,20 @@
   border: 2px groove black;
   grid-area: nav;
   height: 100vh;
-
 }
 
-ul, li{
+ul, li, a{
   margin: 0;
   padding: 0;
+  display: block;
+  text-decoration: none;
 }
 
 .structs{
   border-bottom: 2px groove black;
   list-style-type: none;
   display: block;
-  padding: 1vh 0 2vh 2vh;
+  padding: 3.95vh 0 3.95vh 2vh;
   font-size: 2em;
 }
 
@@ -65,4 +66,14 @@ ul, li{
 .main{
   grid-area: content;
   background-color: blue;
+  margin-top: 16vh;
+}
+
+.secHeader{
+  text-align: center;
+  height: 80vh;
+}
+
+#secArray, #secVector, #secQueue, #secPq, #secStack{
+  padding-top: 16vh;
 }
