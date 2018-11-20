@@ -1,5 +1,10 @@
 .root{
   box-sizing: border-box;
+  display: grid;
+  grid-template-areas:
+  "header header header header header header header"
+  "nav content content content content content content"
+  "nav content content content content content content";
 }
 
 .TitleBar{
@@ -10,6 +15,7 @@
   border-bottom: black groove 2px;
   position: fixed;
   top: 0px;
+  grid-are: header;
 }
 
 #logo{
@@ -29,4 +35,16 @@
   margin: 3vh 0 0 2vw;
   color: white;
   font-size: 3vw;
+}
+
+.navMenu{
+  margin-top: 15vh;
+  border: 2px groove black;
+  grid-area: nav;
+  height: 100vh;
+}
+
+.main{
+  grid-area: content;
+  background-color: blue;
 }
