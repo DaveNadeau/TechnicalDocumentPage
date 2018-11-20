@@ -2,9 +2,9 @@
   box-sizing: border-box;
   display: grid;
   grid-template-areas:
-  "header header header header header header header"
-  "nav content content content content content content"
-  "nav content content content content content content";
+  "header header header header header header header header header header"
+  "nav content content content content content content content content content"
+  "nav content content content content content content content content content";
 }
 
 .TitleBar{
@@ -38,10 +38,28 @@
 }
 
 .navMenu{
-  margin-top: 15vh;
+  margin-top: 16vh;
   border: 2px groove black;
   grid-area: nav;
   height: 100vh;
+
+}
+
+ul, li{
+  margin: 0;
+  padding: 0;
+}
+
+.structs{
+  border-bottom: 2px groove black;
+  list-style-type: none;
+  display: block;
+  padding: 1vh 0 2vh 2vh;
+  font-size: 2em;
+}
+
+.structs:hover{
+  cursor: pointer;
 }
 
 .main{
