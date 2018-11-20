@@ -1,3 +1,32 @@
+.root{
+  box-sizing: border-box;
+}
+
 .TitleBar{
   display: flex;
+  flex-direction: row;
+  background-color: #6f6f6f;
+  padding: 3vh 0 3vh 0;
+  border-bottom: black groove 2px;
+  position: fixed;
+  top: 0px;
+}
+
+#logo{
+  width: 20%;
+  height: auto;
+  align-self: flex-start;
+}
+
+#cppLogo{
+  width: 5%;
+  height: auto;
+  align-self: center;
+  margin-left: 15vw;
+}
+
+#dataStruct{
+  margin: 3vh 0 0 2vw;
+  color: white;
+  font-size: 3vw;
 }
