@@ -2,9 +2,9 @@
   box-sizing: border-box;
   display: grid;
   grid-template-areas:
-  "header header header header header header header header header header"
-  "nav content content content content content content content content content"
-  "nav content content content content content content content content content";
+  "header header header header header"
+  "nav content content content content"
+  "nav content content content content";
 }
 
 .TitleBar{
@@ -15,7 +15,7 @@
   border-bottom: black groove 2px;
   position: fixed;
   top: 0px;
-  grid-are: header;
+  grid-area: header;
 }
 
 #logo{
@@ -34,14 +34,17 @@
 #dataStruct{
   margin: 3vh 0 0 2vw;
   color: white;
+  font-family: 'Open Sans', sans-serif;
   font-size: 3vw;
+  text-shadow: 2px 2px #464646;
 }
 
 .navMenu{
-  margin-top: 16vh;
+  margin-top: 16.2vh;
   border: 2px groove black;
-  grid-area: nav;
   height: 100vh;
+  width: 17.2vw;
+  position: fixed;
 }
 
 ul, li, a{
@@ -49,6 +52,10 @@ ul, li, a{
   padding: 0;
   display: block;
   text-decoration: none;
+}
+
+#structWrapper{
+  grid-area: nav;
 }
 
 .structs{
@@ -66,7 +73,6 @@ ul, li, a{
 .main{
   grid-area: content;
   background-color: blue;
-  margin-top: 16vh;
 }
 
 .secHeader{
@@ -74,6 +80,6 @@ ul, li, a{
   height: 80vh;
 }
 
-#secArray, #secVector, #secQueue, #secPq, #secStack{
+#secList, #secArray, #secVector, #secQueue, #secPq, #secStack{
   padding-top: 16vh;
 }
