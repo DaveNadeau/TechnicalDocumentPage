@@ -98,3 +98,11 @@ ul, li, a{
 #list, #array, #vector, #queue, #priority-queue, #stack{
   padding-top: 18vh;
 }
+
+@media (max-width: 900px){
+  .root{
+    color: white;
+  }
+
+
+}
