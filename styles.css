@@ -5,6 +5,7 @@
   "header header header header header"
   "nav content content content content"
   "nav content content content content";
+  font-family: 'Open Sans', sans-serif;
 }
 
 .TitleBar{
@@ -16,6 +17,7 @@
   position: fixed;
   top: 0px;
   grid-area: header;
+  z-index: 999;
 }
 
 #logo{
@@ -34,7 +36,6 @@
 #dataStruct{
   margin: 3vh 0 0 2vw;
   color: white;
-  font-family: 'Open Sans', sans-serif;
   font-size: 3vw;
   text-shadow: 2px 2px #464646;
 }
@@ -45,6 +46,8 @@
   height: 100vh;
   width: 16.2vw;
   position: fixed;
+  background-color: #cecfcc;
+  z-index: 500;
 }
 
 ul, li, a{
@@ -52,21 +55,30 @@ ul, li, a{
   padding: 0;
   display: block;
   text-decoration: none;
+
 }
 
 #structWrapper{
   grid-area: nav;
 }
 
-.structs{
+#navHeader{
+  text-align: center;
+  font-size: 1vw;
+  font-weight: bold;
+  background-color: #36f6fb;
+  border-bottom: 2px groove black;
+}
+
+.nav-link{
   border-bottom: 2px groove black;
   list-style-type: none;
   display: block;
-  padding: 3.95vh 0 3.95vh 2vh;
-  font-size: 2em;
+  font-size: 2vw;
+  padding: 4vh 0 4vh 0;
 }
 
-.structs:hover{
+.nav-link:hover{
   cursor: pointer;
 }
 
@@ -83,6 +95,6 @@ ul, li, a{
   font-weight: bold;
 }
 
-#secList, #secArray, #secVector, #secQueue, #secPq, #secStack{
+#list, #array, #vector, #queue, #priority-queue, #stack{
   padding-top: 18vh;
 }
