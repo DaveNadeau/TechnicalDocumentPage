@@ -1,108 +1,202 @@
-.root{
-  box-sizing: border-box;
-  display: grid;
-  grid-template-areas:
-  "header header header header header"
-  "nav content content content content"
-  "nav content content content content";
-  font-family: 'Open Sans', sans-serif;
-}
-
-.TitleBar{
-  display: flex;
-  flex-direction: row;
-  background-color: #6f6f6f;
-  padding: 3vh 0 3vh 0;
-  border-bottom: black groove 2px;
-  position: fixed;
-  top: 0px;
-  grid-area: header;
-  z-index: 999;
-}
-
-#logo{
-  width: 20%;
-  height: auto;
-  align-self: flex-start;
-}
-
-#cppLogo{
-  width: 5%;
-  height: auto;
-  align-self: center;
-  margin-left: 15vw;
-}
-
-#dataStruct{
-  margin: 3vh 0 0 2vw;
-  color: white;
-  font-size: 3vw;
-  text-shadow: 2px 2px #464646;
-}
-
-.navMenu{
-  margin-top: 16.2vh;
-  border: 2px groove black;
-  height: 100vh;
-  width: 16.2vw;
-  position: fixed;
-  background-color: #cecfcc;
-  z-index: 500;
-}
-
-ul, li, a{
-  margin: 0;
-  padding: 0;
-  display: block;
-  text-decoration: none;
-
-}
-
-#structWrapper{
-  grid-area: nav;
-}
-
-#navHeader{
-  text-align: center;
-  font-size: 1vw;
-  font-weight: bold;
-  background-color: #36f6fb;
-  border-bottom: 2px groove black;
-}
-
-.nav-link{
-  border-bottom: 2px groove black;
-  list-style-type: none;
-  display: block;
-  font-size: 2vw;
-  padding: 4vh 0 4vh 0;
-}
-
-.nav-link:hover{
-  cursor: pointer;
-}
-
-.main{
-  grid-area: content;
-  background-color: blue;
-}
-
-.secHeader{
-  text-align: center;
-  height: 80vh;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-#list, #array, #vector, #queue, #priority-queue, #stack{
-  padding-top: 18vh;
-}
-
 @media (max-width: 900px){
   .root{
+    box-sizing: border-box;
+    display: grid;
     color: white;
+    grid-template-areas:
+    "header"
+    "nav"
+    "content";
   }
 
+  .TitleBar{
+    display: flex;
+    flex-direction: row;
+    background-color: #6f6f6f;
+    /* padding: 3vh 0 3vh 0; */
+    border-bottom: black groove 2px;
+    position: fixed;
+    top: 0px;
+    grid-area: header;
+    z-index: 999;
+  }
+
+  .navMenu{
+    margin-top: 8vh;
+    border: 2px groove black;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #cecfcc;
+    z-index: 500;
+    grid-area: nav;
+  }
+
+  .main{
+    grid-area: content;
+    background-color: blue;
+  }
+
+  #logo{
+    width: 20%;
+    height: auto;
+    align-self: flex-start;
+  }
+
+  #cppLogo{
+    width: 5%;
+    height: auto;
+    align-self: center;
+    margin-left: 15vw;
+  }
+
+  #dataStruct{
+    margin: 3vh 0 0 2vw;
+    color: white;
+    font-size: 3vw;
+    text-shadow: 2px 2px #464646;
+  }
+
+  ul, li, a{
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-decoration: none;
+
+  }
+
+  #navHeader{
+    text-align: center;
+    font-size: 1vw;
+    font-weight: bold;
+    background-color: #36f6fb;
+    border-bottom: 2px groove black;
+  }
+
+  .nav-link{
+    border-bottom: 2px groove black;
+    list-style-type: none;
+    display: block;
+    font-size: 2vw;
+    padding: 4vh 0 4vh 0;
+  }
+
+  .nav-link:hover{
+    cursor: pointer;
+  }
+
+  .secHeader{
+    text-align: center;
+    height: 80vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  #list, #array, #vector, #queue, #priority-queue, #stack{
+    padding-top: 10vh;
+  }
+
+
+}
+
+@media (min-width: 901px){
+  .root{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas:
+    "header header header header header"
+    "nav content content content content"
+    "nav content content content content";
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .TitleBar{
+    display: flex;
+    flex-direction: row;
+    background-color: #6f6f6f;
+    padding: 3vh 0 3vh 0;
+    border-bottom: black groove 2px;
+    position: fixed;
+    top: 0px;
+    grid-area: header;
+    z-index: 999;
+  }
+
+  #logo{
+    width: 20%;
+    height: auto;
+    align-self: flex-start;
+  }
+
+  #cppLogo{
+    width: 5%;
+    height: auto;
+    align-self: center;
+    margin-left: 15vw;
+  }
+
+  #dataStruct{
+    margin: 3vh 0 0 2vw;
+    color: white;
+    font-size: 3vw;
+    text-shadow: 2px 2px #464646;
+  }
+
+  .navMenu{
+    margin-top: 16.2vh;
+    border: 2px groove black;
+    height: 100vh;
+    width: 16.2vw;
+    position: fixed;
+    background-color: #cecfcc;
+    z-index: 500;
+    grid-area: nav;
+  }
+
+  ul, li, a{
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-decoration: none;
+
+  }
+
+  #navHeader{
+    text-align: center;
+    font-size: 1vw;
+    font-weight: bold;
+    background-color: #36f6fb;
+    border-bottom: 2px groove black;
+  }
+
+  .nav-link{
+    border-bottom: 2px groove black;
+    list-style-type: none;
+    display: block;
+    font-size: 2vw;
+    padding: 4vh 0 4vh 0;
+  }
+
+  .nav-link:hover{
+    cursor: pointer;
+  }
+
+  .main{
+    grid-area: content;
+    background-color: blue;
+  }
+
+  .secHeader{
+    text-align: center;
+    height: 80vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  #list, #array, #vector, #queue, #priority-queue, #stack{
+    padding-top: 18vh;
+  }
 
 }
