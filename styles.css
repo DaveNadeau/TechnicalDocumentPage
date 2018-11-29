@@ -2,7 +2,7 @@
   .root{
     box-sizing: border-box;
     display: grid;
-    color: white;
+    color: black;
     grid-template-areas:
     "header"
     "nav"
@@ -31,7 +31,7 @@
 
   .main{
     grid-area: content;
-    background-color: blue;
+    background-color: #fcfcfc;
   }
 
   #logo{
@@ -44,13 +44,13 @@
     width: 5%;
     height: auto;
     align-self: center;
-    margin-left: 15vw;
+    margin-left: 8vw;
   }
 
   #dataStruct{
-    margin: 3vh 0 0 2vw;
+    margin: 2vh 0 0 2vw;
     color: white;
-    font-size: 3vw;
+    font-size: 5vw;
     text-shadow: 2px 2px #464646;
   }
 
@@ -59,11 +59,9 @@
     padding: 0;
     display: block;
     text-decoration: none;
-    color: white;
   }
 
   .return{
-    color: white;
     text-align:center;
     text-decoration: underline;
   }
@@ -186,7 +184,7 @@
 
   .main{
     grid-area: content;
-    background-color: blue;
+    background-color: #fcfcfc;
   }
 
   .return{
