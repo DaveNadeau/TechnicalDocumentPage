@@ -88,7 +88,6 @@
 
   .secHeader{
     text-align: center;
-    height: 88vh;
     font-family: 'Open Sans', sans-serif;
     font-size: 2em;
     font-weight: bold;
@@ -185,6 +184,8 @@
   .main{
     grid-area: content;
     background-color: #fcfcfc;
+    text-align: left;
+    padding-left: 20vw;
   }
 
   .return{
@@ -193,7 +194,6 @@
 
   .secHeader{
     text-align: center;
-    height: 80vh;
     font-family: 'Open Sans', sans-serif;
     font-size: 2em;
     font-weight: bold;
