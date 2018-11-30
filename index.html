@@ -104,30 +104,178 @@
           </section>
           <section class="main-section" id="vector">
             <header class="secHeader">vector</header>
-            <p></p>
-            <code></code>
-            <p></p>
+            <p>Vectors are sequence containers representing arrays that can change in size.  Just like
+              arrays, vectors use contiguous storage locations for their elements, which means that their
+              elements can also be accessed using offsets on regular pointers to its elements, and just
+              as efficiently as in arrays. But unlike arrays, their size can change dynamically, with
+              their storage being handled automatically by the container.  Internally, vectors use a
+              dynamically allocated array to store their elements. This array may need to be reallocated
+              in order to grow in size when new elements are inserted, which implies allocating a new array
+              and moving all elements to it. This is a relatively expensive task in terms of processing time,
+              and thus, vectors do not reallocate each time an element is added to the container.  Instead,
+              vector containers may allocate some extra storage to accommodate for possible growth, and thus
+              the container may have an actual capacity greater than the storage strictly needed to contain
+              its elements (i.e., its size). Libraries can implement different strategies for growth to balance
+              between memory usage and reallocations, but in any case, reallocations should only happen at
+              logarithmically growing intervals of size so that the insertion of individual elements at the
+              end of the vector can be provided with amortized constant time complexity (see push_back).
+              Therefore, compared to arrays, vectors consume more memory in exchange for the ability to manage
+              storage and grow dynamically in an efficient way.Compared to the other dynamic sequence containers
+              (deques, lists and forward_lists), vectors are very efficient accessing its elements (just like
+              arrays) and relatively efficient adding or removing elements from its end. For operations that involve
+              inserting or removing elements at positions other than the end, they perform worse than the others,
+              and have less consistent iterators and references than lists and forward_lists.</p>
+            <code>
+              vector<int> g1; <br>
+
+              for (int i = 1; i <= 5; i++) <br>
+                 g1.push_back(i); <br><br>
+
+             cout << "Output of begin and end: "; <br>
+             for (auto i = g1.begin(); i != g1.end(); ++i) <br>
+                 cout << *i << " "; <br><br>
+
+             cout << "\nOutput of cbegin and cend: "; <br>
+             for (auto i = g1.cbegin(); i != g1.cend(); ++i) <br>
+                 cout << *i << " "; <br><br>
+
+             cout << "\nOutput of rbegin and rend: "; <br>
+             for (auto ir = g1.rbegin(); ir != g1.rend(); ++ir) <br>
+                 cout << *ir << " "; <br><br>
+
+             cout << "\nOutput of crbegin and crend : "; <br>
+             for (auto ir = g1.crbegin(); ir != g1.crend(); ++ir) <br>
+                 cout << *ir << " "; <br>
+            </code>
+            <p>source: <a href="http://www.cplusplus.com/reference/vector/vector/?kw=vector"
+              target="_blank">http://www.cplusplus.com/reference/vector/vector/?kw=vector</a><br><br><br></p>
             <li class="return"><a href="#titlebar">Back to Top</a></li>
           </section>
           <section class="main-section" id="queue">
             <header class="secHeader">queue</header>
-            <p></p>
-            <code></code>
-            <p></p>
+            <p>queues are a type of container adaptor, specifically designed to operate in a FIFO context
+              (first-in first-out), where elements are inserted into one end of the container and extracted
+              from the other.  queues are implemented as containers adaptors, which are classes that use an
+              encapsulated object of a specific container class as its underlying container, providing a specific
+              set of member functions to access its elements. Elements are pushed into the "back" of the specific
+              container and popped from its "front".  The underlying container may be one of the standard container
+              class template or some other specifically designed container class. </p>
+            <code>
+              void showq(queue <int> gq) <br>
+              { <br>
+                  queue <int> g = gq; <br>
+                  while (!g.empty()) <br>
+                  { <br>
+                      cout << '\t' << g.front(); <br>
+                      g.pop(); <br>
+                  } <br>
+                  cout << '\n'; <br>
+              } <br><br>
+
+              int main() <br>
+              { <br>
+                  queue <int> gquiz; <br>
+                  gquiz.push(10); <br>
+                  gquiz.push(20); <br>
+                  gquiz.push(30); <br><br>
+
+                  cout << "The queue gquiz is : "; <br>
+                  showq(gquiz); <br><br>
+
+                  cout << "\ngquiz.size() : " << gquiz.size(); <br>
+                  cout << "\ngquiz.front() : " << gquiz.front(); <br>
+                  cout << "\ngquiz.back() : " << gquiz.back(); <br><br>
+
+                  cout << "\ngquiz.pop() : "; <br>
+                  gquiz.pop(); <br>
+                  showq(gquiz); <br>
+            </code>
+            <p>source: <a href="http://www.cplusplus.com/reference/queue/queue/?kw=queue"
+              target="_blank">http://www.cplusplus.com/reference/queue/queue/?kw=queue</a><br><br><br></p>
             <li class="return"><a href="#titlebar">Back to Top</a></li>
           </section>
           <section class="main-section" id="priority-queue">
             <header class="secHeader">priority-queue</header>
-            <p></p>
-            <code></code>
-            <p></p>
+            <p>Priority queues are a type of container adaptors, specifically designed such that its first
+              element is always the greatest of the elements it contains, according to some strict weak
+              ordering criterion.  This context is similar to a heap, where elements can be inserted at
+              any moment, and only the max heap element can be retrieved (the one at the top in the priority
+              queue).  Priority queues are implemented as container adaptors, which are classes that use an
+              encapsulated object of a specific container class as its underlying container, providing a specific
+              set of member functions to access its elements. Elements are popped from the "back" of the specific
+              container, which is known as the top of the priority queue.  The underlying container may be any of
+              the standard container class templates or some other specifically designed container class.</p>
+            <code>
+              #include <iostream> <br>
+              #include <queue> <br><br>
+
+              using namespace std; <br><br>
+
+              void showpq(priority_queue <int> gq) <br>
+              { <br>
+                  priority_queue <int> g = gq; <br>
+                  while (!g.empty()) <br>
+                  { <br>
+                      cout << '\t' << g.top(); <br>
+                      g.pop(); <br>
+                  } br
+                  cout << '\n'; <br>
+              } <br><br>
+
+              int main () <br>
+              { <br>
+                  priority_queue <int> gquiz; <br>
+                  gquiz.push(10); <br>
+                  gquiz.push(30); <br>
+                  gquiz.push(20); <br>
+                  gquiz.push(5); <br>
+                  gquiz.push(1); <br><br>
+
+                  cout << "The priority queue gquiz is : "; <br>
+                  showpq(gquiz); <br><br>
+
+                  cout << "\ngquiz.size() : " << gquiz.size(); <br>
+                  cout << "\ngquiz.top() : " << gquiz.top(); <br><br>
+
+
+                  cout << "\ngquiz.pop() : "; <br>
+                  gquiz.pop(); <br>
+                  showpq(gquiz); <br><br>
+
+                  return 0; <br>
+              } <br>
+            </code>
+            <p>source: <a href="http://www.cplusplus.com/reference/queue/priority_queue/"
+              target="_blank">http://www.cplusplus.com/reference/queue/priority_queue/</a><br><br><br></p>
             <li class="return"><a href="#titlebar">Back to Top</a></li>
           </section>
           <section class="main-section" id="stack">
             <header class="secHeader">stack</header>
-            <p></p>
-            <code></code>
-            <p></p>
+            <p>Stacks are a type of container adaptor, specifically designed to operate in a LIFO context
+              (last-in first-out), where elements are inserted and extracted only from one end of the container.
+              stacks are implemented as containers adaptors, which are classes that use an encapsulated object
+              of a specific container class as its underlying container, providing a specific set of member
+              functions to access its elements. Elements are pushed/popped from the "back" of the specific
+              container, which is known as the top of the stack.  The underlying container may be any of the
+              standard container class templates or some other specifically designed container class.</p>
+            <code>
+              std::deque<int> mydeque (3,100);          // deque with 3 elements <br>
+              std::vector<int> myvector (2,200);        // vector with 2 elements <br><br>
+
+              std::stack<int> first;                    // empty stack <br>
+              std::stack<int> second (mydeque);         // stack initialized to copy of deque <br><br>
+
+              std::stack<int,std::vector<int> > third;  // empty stack using vector <br>
+              std::stack<int,std::vector<int> > fourth (myvector); <br><br>
+
+              std::cout << "size of first: " << first.size() << '\n'; <br>
+              std::cout << "size of second: " << second.size() << '\n';<br>
+              std::cout << "size of third: " << third.size() << '\n'; <br>
+              std::cout << "size of fourth: " << fourth.size() << '\n';  <br><br>
+            </code>
+            <p>source: <a href="http://www.cplusplus.com/reference/stack/stack/?kw=stack"
+              target="_blank">http://www.cplusplus.com/reference/stack/stack/?kw=stack</a><br><br><br><br>
+              <br><br><br><br><br><br><br><br><br><br><br><br></p>
             <li class="return"><a href="#titlebar">Back to Top</a></li>
           </section>
         </main>
